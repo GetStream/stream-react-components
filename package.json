@@ -10,6 +10,11 @@
         "babel-core": "^6.26.3",
         "babel-loader": "^7.1.5",
         "babel-preset-react": "^6.24.1",
+        "getstream": "^3.18.0",
         "react": "^16.4.1"
+    },
+    "devDependencies": {
+        "eslint": "^5.1.0",
+        "eslint-plugin-react": "^7.10.0"
     }
 }
