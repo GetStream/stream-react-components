@@ -1,7 +1,5 @@
 # Stream React Components
 
-![](https://media.giphy.com/media/vfy6JExK7Ryhi/giphy.gif)
-
 ## Table of contents
 
 -   [Setup](#setup)
