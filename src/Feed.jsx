@@ -25,13 +25,18 @@ export default(streamClient) => {
             });
         }
         render() {
-            return <div>{
-                    this.state.activities.map((activity) => {
-                        return (<div key={activity.id}>
-                            {activity.userEmail}: {activity.message}
-                        </div>);
-                    })
-                }</div>;
+            // custom renderer
+            if (this.props.render) {
+                return this.props.render(this.state.activities);
+            } else {
+                return <div>{
+                        this.state.activities.map((activity) => {
+                            return (<div key={activity.id}>
+                                {activity.userEmail}: {activity.message}
+                            </div>);
+                        })
+                    }</div>;
+            }
         }
     };
 };
