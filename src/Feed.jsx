@@ -1,4 +1,5 @@
 import React from "react";
+import Activity from "./Activity.jsx";
 
 export default(streamClient) => {
     return class Feed extends React.Component {
@@ -28,12 +29,19 @@ export default(streamClient) => {
             // custom renderer
             if (this.props.render) {
                 return this.props.render(this.state.activities);
+            } else if (this.props.activityComponent) {
+                let CustomActivityComponent = this.props.activityComponent;
+                return (<React.Fragment>
+                    {
+                        this.state.activities.map((activity) => {
+                            return (<CustomActivityComponent {...activity} key={activity.id}></CustomActivityComponent>);
+                        })
+                    }
+                </React.Fragment>);
             } else {
                 return <div>{
                         this.state.activities.map((activity) => {
-                            return (<div key={activity.id}>
-                                {activity.userEmail}: {activity.message}
-                            </div>);
+                            return (<Activity {...activity} key={activity.id}></Activity>);
                         })
                     }</div>;
             }

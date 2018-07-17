@@ -173,17 +173,50 @@ let { Feed } = StreamReactComponents("yourStreamAppKey")
 
 #### Usage
 
+All you need is a `feedToken`, `feedSlug`, and `feedID` to use the default version of the `Feed`:
+
 ```jsx
 <Feed feedToken={this.state.feedToken} feedSlug={"profile"} feedID={1234} />
 ```
 
+##### Custom Activity Component
+
+If you'd like to customize what activity component is displayed within the feed, you can use the `activityComponent` prop:
+
+```jsx
+const MyCustomActivity = (props) => {
+    return (<div>my custom activity: {props.id}</div>);
+}
+
+<Feed feedToken={this.state.feedToken} feedSlug={"profile"} feedID={1234} activityComponent={MyCustomActivity}/>
+```
+
+##### Custom renderer
+
+If you'd like to do away with the default `Feed` subcomponents, you can pass in a function to the `render` prop that takes one `activities` argument:
+
+```jsx
+<Feed feedToken={this.state.feedToken} feedSlug={"profile"} feedID={1234} render={(activities) => {
+        return (<React.Fragment>
+            <h1>my custom renderer</h1>
+            {
+                activities.map((activity) => {
+                    return (<div key={activity.id}>my custom activity: {activity.id}</div>)
+                })
+            }
+            </React.Fragment>)
+    }
+}/>
+```
+
 #### Props
 
-| Prop                | Description | Required | Default       |
-| ------------------- | ----------- | :------: | ------------- |
-| `feedToken`         |             |     ✓    |               |
-| `feedSlug`          |             |     ✓    |               |
-| `feedID`            |             |     ✓    |               |
-| `activityComponent` |             |          | ActivityGroup |
+| Prop                | Description                                             | Required | Default  |
+| ------------------- | ------------------------------------------------------- | :------: | -------- |
+| `feedToken`         | the server-generated read-only token for this feed      |     ✓    |          |
+| `feedSlug`          | the name of your feed group - e.g. `profile`            |     ✓    |          |
+| `feedID`            | the ID of the feed you'd like to retrieve - e.g. `1234` |     ✓    |          |
+| `activityComponent` | the custom activity that you'd like to render           |          | Activity |
+| `render`            |                                                         |          |          |
 
 ##### Callback props
