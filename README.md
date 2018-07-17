@@ -111,11 +111,71 @@ Now, whenever you send an HTTP `GET` request to `http://localhost:9999/feeds/pro
 
 ### Creating the `Feed` component in your react app, and using the read-only feed token
 
-If you're using `create-react-app`
+If you're using `create-react-app`, the best place to put this is in your `src/App.js` file.
+
+Replace the contents of that file with this (you'll also need to install the `axios` and the `stream-react-components` dependencies, and replace `yourStreamAppKey`):
+
+```jsx
+import React from 'react';
+import StreamReactComponents from 'stream-react-components';
+import axios from "axios";
+
+let {Feed} = StreamReactComponents("yourStreamAppKey");
+
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            feedToken: null
+        }
+    }
+    componentDidMount() {
+        axios.get("http://localhost:9999/feeds/profile:1234/token").then(response => {
+            this.setState({feedToken: response.data});
+        })
+    }
+    render() {
+        if (this.state.feedToken) {
+            return (<div>
+                <h1>Stream React Component example</h1>
+                <Feed feedToken={this.state.feedToken} feedSlug={"profile"} feedID={1234}/>
+            </div>)
+        } else {
+            return null
+        }
+    }
+}
+
+export default App;
+```
+
+Otherwise, just fetch the read-only feed token and include it in the `Feed` component.
+
+## `StreamReactComponents` constructor
+
+The `StreamReactComponents` constructor ensures that only one instance of the client-side Stream library is created for all the components on the page.
+
+The only parameter is your Stream app key, which can be found in the "App Access Keys" section of your app on the Stream dashboard (<https://getstream.io/dashboard/>).
+
+`StreamReactComponents` returns an object of all the React components specified in the [Components section](#components).
+
+### Usage
+
+```jsx
+import StreamReactComponents from "stream-react-components";
+
+let { Feed } = StreamReactComponents("yourStreamAppKey")
+```
 
 ## Components
 
 ### Feed
+
+#### Usage
+
+```jsx
+<Feed feedToken={this.state.feedToken} feedSlug={"profile"} feedID={1234} />
+```
 
 #### Props
 
