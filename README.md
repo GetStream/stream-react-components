@@ -7,7 +7,10 @@ import StreamReactComponents from 'stream-react-components';
 
 let {Feed} = StreamReactComponents(yourStreamAppKey);
 
-ReactDOM.render(<Feed feedToken={someFeedTokenYouGotAsynchronously} feedSlug={"profile"} feedID={1234}/>, document.getElementById('app'));
+ReactDOM.render(
+    <Feed feedToken={someFeedTokenYouGotAsynchronously} feedSlug={"profile"} feedID={1234}/>,
+    document.getElementById('app')
+);
 ```
 
 ## Table of contents
