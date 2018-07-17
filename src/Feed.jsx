@@ -20,23 +20,17 @@ export default(streamClient) => {
         }
         componentDidMount() {
             // make call to stream API, load activities into state
-            this
-                .feed
-                .get()
-                .then(response => {
-                    this.setState({activities: response.results});
-                });
+            this.feed.get().then(response => {
+                this.setState({activities: response.results});
+            });
         }
         render() {
             return <div>{
-                    this
-                        .state
-                        .activities
-                        .map((activity) => {
-                            return (<div key={activity.id}>
-                                {activity.userEmail}: {activity.message}
-                            </div>);
-                        })
+                    this.state.activities.map((activity) => {
+                        return (<div key={activity.id}>
+                            {activity.userEmail}: {activity.message}
+                        </div>);
+                    })
                 }</div>;
         }
     };
