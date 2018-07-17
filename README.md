@@ -3,6 +3,10 @@
 ## Table of contents
 
 -   [Setup](#setup)
+    -   [Creating a new React app](#creating-a-new-react-app)
+    -   [Creating a new Stream app + feed group](#creating-a-new-stream-app--feed-group)
+    -   [Returning a read-only feed token from the server](#returning-a-read-only-feed-token-from-the-server)
+    -   [Creating the `Feed` component in your react app, and using the read-only feed token](#creating-the-feed-component-in-your-react-app-and-using-the-read-only-feed-token)
 -   [Components](#components)
 
 ## Setup
@@ -14,6 +18,16 @@
 3.  Create a read-only feed token server-side, pass it to the React app and include it in your `Feed` components
 
 ### Creating a new React app
+
+The easiest way to create a new React app is with [`create-react-app`](https://github.com/facebook/create-react-app).
+
+```txt
+npx create-react-app my-stream-react-components-app
+cd my-stream-react-components-app
+npm start
+```
+
+Now you have a `create-react-app` running at `http://localhost:3000`.
 
 ### Creating a new Stream app + feed group
 
