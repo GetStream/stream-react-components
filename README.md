@@ -1,5 +1,15 @@
 # Stream React Components
 
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import StreamReactComponents from 'stream-react-components';
+
+let {Feed} = StreamReactComponents(yourStreamAppKey);
+
+ReactDOM.render(<Feed feedToken={someFeedTokenYouGotAsynchronously} feedSlug={"profile"} feedID={1234}/>, document.getElementById('app'));
+```
+
 ## Table of contents
 
 -   [Setup](#setup)
@@ -27,7 +37,9 @@ cd my-stream-react-components-app
 npm start
 ```
 
-Now you have a `create-react-app` running at `http://localhost:3000`.
+Now you have a `create-react-app` app running at `http://localhost:3000`.
+
+You don't have to use `create-react-app` to use Stream's React components - you can just integrate them in like you would any other component
 
 ### Creating a new Stream app + feed group
 
@@ -95,6 +107,8 @@ node server.js
 Now, whenever you send an HTTP `GET` request to `http://localhost:9999/feeds/profile:1234/token`, you'll get a read-only token for the feed `profile:1234`.
 
 ### Creating the `Feed` component in your react app, and using the read-only feed token
+
+If you're using `create-react-app`
 
 ## Components
 
