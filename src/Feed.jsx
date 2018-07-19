@@ -1,13 +1,21 @@
 import React from "react";
 import Activity from "./Activity.jsx";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+
+const FeedComponent = styled.div `
+    padding: 1em 5em;
+    margin: auto;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #efefef;
+`;
 
 export default(streamClient) => {
     return class Feed extends React.Component {
         static propTypes = {
             feedToken: PropTypes.string.isRequired,
             feedSlug: PropTypes.string.isRequired,
-            feedID: PropTypes.string.isRequired,
+            feedID: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
             render: PropTypes.func,
             activityComponent: PropTypes.element
         }
@@ -39,19 +47,19 @@ export default(streamClient) => {
                 return this.props.render(this.state.activities);
             } else if (this.props.activityComponent) {
                 let CustomActivityComponent = this.props.activityComponent;
-                return (<React.Fragment>
+                return (<FeedComponent>
                     {
                         this.state.activities.map((activity) => {
                             return (<CustomActivityComponent {...activity} key={activity.id}></CustomActivityComponent>);
                         })
                     }
-                </React.Fragment>);
+                </FeedComponent>);
             } else {
-                return <div>{
+                return <FeedComponent>{
                         this.state.activities.map((activity) => {
                             return (<Activity {...activity} key={activity.id}></Activity>);
                         })
-                    }</div>;
+                    }</FeedComponent>;
             }
         }
     };
