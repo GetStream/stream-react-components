@@ -1,6 +1,6 @@
 {
     "name": "stream-react-components",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "React component library for GetStream.io",
     "main": "dist/index.js",
     "repository": "git@github.com:kenhoff/stream-react-components.git",
