@@ -1,23 +1,26 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-    entry: './src/index.jsx',
+    entry: "./src/index.jsx",
     module: {
         rules: [
             {
                 test: /\.jsx?$/,
-                include: [path.resolve(__dirname, 'src')],
+                include: [path.resolve(__dirname, "src")],
                 exclude: /node_modules/,
-                loader: 'babel-loader',
+                loader: "babel-loader",
                 options: {
-                    presets: ['react']
+                    presets: [
+                        "env", "react"
+                    ],
+                    plugins: ["transform-class-properties"]
                 }
             }
         ]
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'index.js',
-        libraryTarget: 'umd'
+        path: path.resolve(__dirname, "dist"),
+        filename: "index.js",
+        libraryTarget: "umd"
     }
 };
