@@ -1,8 +1,16 @@
 import React from "react";
 import Activity from "./Activity.jsx";
+import PropTypes from "prop-types";
 
 export default(streamClient) => {
     return class Feed extends React.Component {
+        static propTypes = {
+            feedToken: PropTypes.string.isRequired,
+            feedSlug: PropTypes.string.isRequired,
+            feedID: PropTypes.string.isRequired,
+            render: PropTypes.func,
+            activityComponent: PropTypes.element
+        }
         constructor(props) {
             super(props);
             if (!this.props.feedToken) {
