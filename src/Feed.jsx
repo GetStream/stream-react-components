@@ -42,14 +42,14 @@ export default(streamClient) => {
                 return (<div className="stream-react-components feed">
                     {
                         this.state.activities.map((activity) => {
-                            return (<CustomActivityComponent {...activity} key={activity.id}></CustomActivityComponent>);
+                            return (<CustomActivityComponent activity={activity} key={activity.id}></CustomActivityComponent>);
                         })
                     }
                 </div>);
             } else {
                 return <div className="stream-react-components feed">{
                         this.state.activities.map((activity) => {
-                            return (<Activity {...activity} key={activity.id}></Activity>);
+                            return (<Activity activity={activity} key={activity.id}></Activity>);
                         })
                     }</div>;
             }
