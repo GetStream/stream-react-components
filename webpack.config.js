@@ -20,7 +20,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "index.js",
+        filename: "stream-react-components.js",
         libraryTarget: "umd"
     }
 };
