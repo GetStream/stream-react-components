@@ -1,3 +1,17 @@
-h1 {
-  color: blue;
-  background-color: chartreuse; }
+.stream-react-components .feed {
+  padding: 1em 5em;
+  margin: auto;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #efefef; }
+
+.stream-react-components .activity {
+  background-color: white;
+  padding: 1em;
+  margin: 1em auto;
+  border-radius: 1em;
+  box-shadow: 0.1em 0.1em 1em 0.1em #cccccc;
+  transition: transform 0.5s;
+  cursor: pointer;
+  max-width: 30em; }
+  .stream-react-components .activity:hover {
+    transform: scale(1.1); }
