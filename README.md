@@ -5,7 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import StreamReactComponents from 'stream-react-components';
 
-let {Feed} = StreamReactComponents(yourStreamAppKey);
+let {Feed} = StreamReactComponents(yourStreamAppKey, yourStreamAppID);
 
 ReactDOM.render(
     <Feed feedToken={someFeedTokenYouGotAsynchronously} feedSlug={"profile"} feedID={1234}/>,
@@ -120,7 +120,7 @@ import React from 'react';
 import StreamReactComponents from 'stream-react-components';
 import axios from "axios";
 
-let {Feed} = StreamReactComponents("yourStreamAppKey");
+let {Feed} = StreamReactComponents("yourStreamAppKey", "yourStreamAppID");
 
 class App extends React.Component {
     constructor(props) {
