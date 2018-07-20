@@ -1,14 +1,6 @@
 import React from "react";
 import Activity from "./Activity.jsx";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-
-const FeedComponent = styled.div `
-    padding: 1em 5em;
-    margin: auto;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: #efefef;
-`;
 
 export default(streamClient) => {
     return class Feed extends React.Component {
@@ -47,19 +39,19 @@ export default(streamClient) => {
                 return this.props.render(this.state.activities);
             } else if (this.props.activityComponent) {
                 let CustomActivityComponent = this.props.activityComponent;
-                return (<FeedComponent>
+                return (<div className="feed">
                     {
                         this.state.activities.map((activity) => {
                             return (<CustomActivityComponent {...activity} key={activity.id}></CustomActivityComponent>);
                         })
                     }
-                </FeedComponent>);
+                </div>);
             } else {
-                return <FeedComponent>{
+                return <div className="feed">{
                         this.state.activities.map((activity) => {
                             return (<Activity {...activity} key={activity.id}></Activity>);
                         })
-                    }</FeedComponent>;
+                    }</div>;
             }
         }
     };
