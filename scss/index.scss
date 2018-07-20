@@ -1,14 +1,14 @@
 // feed component
 
 .stream-react-components {
-    .feed {
-        padding: 1em 5em;
+    &.feed {
+        padding: 1em;
         margin: auto;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         background-color: #efefef;
     }
 
-    .activity {
+    &.activity {
         background-color: white;
         padding: 1em;
         margin: 1em auto;

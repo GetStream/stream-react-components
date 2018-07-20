@@ -39,7 +39,7 @@ export default(streamClient) => {
                 return this.props.render(this.state.activities);
             } else if (this.props.activityComponent) {
                 let CustomActivityComponent = this.props.activityComponent;
-                return (<div className="feed">
+                return (<div className="stream-react-components feed">
                     {
                         this.state.activities.map((activity) => {
                             return (<CustomActivityComponent {...activity} key={activity.id}></CustomActivityComponent>);
@@ -47,7 +47,7 @@ export default(streamClient) => {
                     }
                 </div>);
             } else {
-                return <div className="feed">{
+                return <div className="stream-react-components feed">{
                         this.state.activities.map((activity) => {
                             return (<Activity {...activity} key={activity.id}></Activity>);
                         })
