@@ -3,10 +3,10 @@ import Feed from "./Feed.jsx";
 
 let streamClient;
 
-export default(streamKey) => {
+export default(streamKey, streamAppID) => {
     // singletonning stream client with JS closure
     if (!streamClient) {
-        streamClient = stream.connect(streamKey);
+        streamClient = stream.connect(streamKey, null, streamAppID);
     }
     return {Feed: Feed(streamClient)};
 };

@@ -11,6 +11,7 @@ export default(streamClient) => {
             render: PropTypes.func,
             activityComponent: PropTypes.element
         }
+
         constructor(props) {
             super(props);
             if (!this.props.feedToken) {
@@ -32,6 +33,16 @@ export default(streamClient) => {
             this.feed.get().then(response => {
                 this.setState({activities: response.results});
             });
+
+            // connect realtime feed
+            this.feed.subscribe((data) => {
+                this.setState({
+                    activities: [...data.new.concat(this.state.activities)]
+                });
+            });
+        }
+        componentWillUnmount() {
+            this.feed.cancel();
         }
         render() {
             // custom renderer
