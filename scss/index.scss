@@ -18,9 +18,20 @@
         transition: transform 0.5s;
         cursor: pointer;
         max-width: 30em;
+        animation: fade 1s;
+        opacity: 1;
 
         &:hover {
             transform: scale(1.1);
         }
+    }
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }

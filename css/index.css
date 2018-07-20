@@ -13,6 +13,14 @@
   box-shadow: 0.1em 0.1em 1em 0.1em #cccccc;
   transition: transform 0.5s;
   cursor: pointer;
-  max-width: 30em; }
+  max-width: 30em;
+  animation: fade 1s;
+  opacity: 1; }
   .stream-react-components.activity:hover {
     transform: scale(1.1); }
+
+@keyframes fade {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
