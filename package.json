@@ -2,10 +2,13 @@
     "name": "stream-react-components",
     "version": "0.0.7",
     "description": "React component library for GetStream.io",
-    "main": "dist/index.js",
+    "main": "dist/stream-react-components.js",
     "repository": "git@github.com:kenhoff/stream-react-components.git",
     "author": "Ken Hoff <ken@hoff.tech>",
     "license": "MIT",
+    "scripts": {
+        "dev": "concurrently \"webpack --watch --mode=\"development\"\" \"node-sass --watch ./scss --output ./css\""
+    },
     "dependencies": {
         "babel-core": "^6.26.3",
         "babel-loader": "^7.1.5",
@@ -17,7 +20,11 @@
         "styled-components": "^3.3.3"
     },
     "devDependencies": {
+        "concurrently": "^3.6.0",
         "eslint": "^5.1.0",
-        "eslint-plugin-react": "^7.10.0"
+        "eslint-plugin-react": "^7.10.0",
+        "node-sass": "^4.9.2",
+        "webpack": "^4.16.1",
+        "webpack-cli": "^3.1.0"
     }
 }
