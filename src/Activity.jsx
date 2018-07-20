@@ -1,6 +1,6 @@
 import React from "react";
 
-const ActivityContainer = props => {
+const Activity = props => {
     return (<div className="stream-react-components activity" key={props.id}>
         <pre><code>
             {JSON.stringify(props.activity, null, "\t")}
@@ -9,4 +9,4 @@ const ActivityContainer = props => {
     </div>);
 };
 
-export default ActivityContainer;
+export default Activity;
