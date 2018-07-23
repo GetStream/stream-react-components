@@ -1,19 +1,37 @@
-// feed component
+// colors
+$white: white;
+$green: #21D26E;
+$gray: #D0D0D0;
+$dark-gray: #A9A9A9;
+$box-shadow: 0.1em 0.1em 1em 0.1em $gray;
+$border-radius: 0.5em;
 
 .stream-react-components {
-    &.feed {
+    p {
+        // margin: 0;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    &.feed,
+    .feed {
         padding: 1em;
         margin: auto;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         background-color: #efefef;
     }
 
-    &.activity {
+    &.activity,
+    .activity {
         overflow: scroll;
         background-color: white;
         padding: 1em;
         margin: 1em auto;
-        border-radius: 1em;
+        border-radius: 0.5em;
         box-shadow: 0.1em 0.1em 1em 0.1em #cccccc;
         transition: transform 0.5s;
         cursor: pointer;
@@ -23,6 +41,116 @@
 
         &:hover {
             transform: scale(1.1);
+        }
+    }
+
+    button {
+        font-size: 1rem;
+        background-color: $green;
+        color: white;
+        padding: 1em 2em;
+        cursor: pointer;
+        border-radius: 0.5em;
+        border: none;
+        margin: 0 0.25em;
+        box-shadow: $box-shadow;
+        font-weight: bolder;
+
+        &.cancel {
+            background-color: $gray;
+        }
+
+        &.hollow {
+            box-shadow: none;
+            background-color: transparent;
+            border: 2px solid $green;
+            color: $green;
+        }
+
+        &.link {
+            background-color: transparent;
+            border: none;
+            color: $green;
+            box-shadow: none;
+        }
+    }
+
+    .user-profile {
+        height: 3.5em;
+        width: 3.5em;
+        border-radius: 10000px;
+
+        &.large {
+            height: 6em;
+            width: 6em;
+        }
+
+        &.small {
+            height: 2em;
+            width: 2em;
+        }
+    }
+
+    .user-profile-group {
+        display: grid;
+        grid-template-areas: 'image name' 'image info';
+        justify-content: start;
+        align-items: center;
+
+        .name {
+            grid-area: name;
+            font-weight: bolder;
+        }
+
+        .info {
+            grid-area: info;
+            font-size: 0.75em;
+        }
+
+        .user-profile {
+            grid-area: image;
+            margin-right: 1em;
+        }
+    }
+
+    .insta-post {
+        max-width: 100%;
+        width: 560px;
+        background-color: $white;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+    }
+
+    .insta-post-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 1.5em;
+        margin: 1.5em 0;
+    }
+
+    .insta-post-content {
+        p {
+
+            padding: 0 1.5em;
+        }
+    }
+
+    .reactions {
+        border-top: 2px solid $gray;
+        margin: 0 1.5em;
+        padding: 1.5em 0;
+    }
+
+    .reaction {
+        display: flex;
+        align-items: center;
+        color: $dark-gray;
+
+        i {
+            font-size: 1.5em;
+            margin-right: 0.5em;
         }
     }
 }

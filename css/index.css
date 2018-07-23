@@ -1,23 +1,103 @@
-.stream-react-components.feed {
-  padding: 1em;
-  margin: auto;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #efefef; }
-
-.stream-react-components.activity {
-  overflow: scroll;
-  background-color: white;
-  padding: 1em;
-  margin: 1em auto;
-  border-radius: 1em;
-  box-shadow: 0.1em 0.1em 1em 0.1em #cccccc;
-  transition: transform 0.5s;
-  cursor: pointer;
-  max-width: 30em;
-  animation: fade 1s;
-  opacity: 1; }
-  .stream-react-components.activity:hover {
-    transform: scale(1.1); }
+.stream-react-components {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .stream-react-components img {
+    max-width: 100%;
+    height: auto;
+    display: block; }
+  .stream-react-components.feed,
+  .stream-react-components .feed {
+    padding: 1em;
+    margin: auto;
+    background-color: #efefef; }
+  .stream-react-components.activity,
+  .stream-react-components .activity {
+    overflow: scroll;
+    background-color: white;
+    padding: 1em;
+    margin: 1em auto;
+    border-radius: 0.5em;
+    box-shadow: 0.1em 0.1em 1em 0.1em #cccccc;
+    transition: transform 0.5s;
+    cursor: pointer;
+    max-width: 30em;
+    animation: fade 1s;
+    opacity: 1; }
+    .stream-react-components.activity:hover,
+    .stream-react-components .activity:hover {
+      transform: scale(1.1); }
+  .stream-react-components button {
+    font-size: 1rem;
+    background-color: #21D26E;
+    color: white;
+    padding: 1em 2em;
+    cursor: pointer;
+    border-radius: 0.5em;
+    border: none;
+    margin: 0 0.25em;
+    box-shadow: 0.1em 0.1em 1em 0.1em #D0D0D0;
+    font-weight: bolder; }
+    .stream-react-components button.cancel {
+      background-color: #D0D0D0; }
+    .stream-react-components button.hollow {
+      box-shadow: none;
+      background-color: transparent;
+      border: 2px solid #21D26E;
+      color: #21D26E; }
+    .stream-react-components button.link {
+      background-color: transparent;
+      border: none;
+      color: #21D26E;
+      box-shadow: none; }
+  .stream-react-components .user-profile {
+    height: 3.5em;
+    width: 3.5em;
+    border-radius: 10000px; }
+    .stream-react-components .user-profile.large {
+      height: 6em;
+      width: 6em; }
+    .stream-react-components .user-profile.small {
+      height: 2em;
+      width: 2em; }
+  .stream-react-components .user-profile-group {
+    display: grid;
+    grid-template-areas: 'image name' 'image info';
+    justify-content: start;
+    align-items: center; }
+    .stream-react-components .user-profile-group .name {
+      grid-area: name;
+      font-weight: bolder; }
+    .stream-react-components .user-profile-group .info {
+      grid-area: info;
+      font-size: 0.75em; }
+    .stream-react-components .user-profile-group .user-profile {
+      grid-area: image;
+      margin-right: 1em; }
+  .stream-react-components .insta-post {
+    max-width: 100%;
+    width: 560px;
+    background-color: white;
+    border-radius: 0.5em;
+    box-shadow: 0.1em 0.1em 1em 0.1em #D0D0D0; }
+  .stream-react-components .insta-post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1.5em;
+    margin: 1.5em 0; }
+  .stream-react-components .insta-post-content p {
+    padding: 0 1.5em; }
+  .stream-react-components .reactions {
+    border-top: 2px solid #D0D0D0;
+    margin: 0 1.5em;
+    padding: 1.5em 0; }
+  .stream-react-components .reaction {
+    display: flex;
+    align-items: center;
+    color: #A9A9A9; }
+    .stream-react-components .reaction i {
+      font-size: 1.5em;
+      margin-right: 0.5em; }
 
 @keyframes fade {
   from {
