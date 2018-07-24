@@ -1,14 +1,27 @@
 // colors
+$black: black;
 $white: white;
 $green: #21D26E;
 $gray: #D0D0D0;
 $dark-gray: #A9A9A9;
+$light-gray: #efefef; // not colors
 $box-shadow: 0.1em 0.1em 1em 0.1em $gray;
 $border-radius: 0.5em;
+$rounded: 10000px;
+$insta-post-gutter: 1.5em;
 
 .stream-react-components {
-    p {
-        // margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    input {
+        background-color: $light-gray;
+        font-size: 1rem;
+        color: $black;
+        border: none;
+        padding: 0.5em 1em;
+        border-radius: $rounded;
+        display: block;
+        width: 100%;
     }
 
     img {
@@ -16,23 +29,22 @@ $border-radius: 0.5em;
         height: auto;
         display: block;
     }
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
     &.feed,
     .feed {
         padding: 1em;
         margin: auto;
-        background-color: #efefef;
+        background-color: $light-gray;
     }
 
     &.activity,
     .activity {
         overflow: scroll;
-        background-color: white;
+        background-color: $white;
         padding: 1em;
         margin: 1em auto;
         border-radius: 0.5em;
-        box-shadow: 0.1em 0.1em 1em 0.1em #cccccc;
+        box-shadow: $box-shadow;
         transition: transform 0.5s;
         cursor: pointer;
         max-width: 30em;
@@ -78,7 +90,7 @@ $border-radius: 0.5em;
     .user-profile {
         height: 3.5em;
         width: 3.5em;
-        border-radius: 10000px;
+        border-radius: $rounded;
 
         &.large {
             height: 6em;
@@ -88,6 +100,11 @@ $border-radius: 0.5em;
         &.small {
             height: 2em;
             width: 2em;
+        }
+
+        &.ultra-small {
+            height: 1.5em;
+            width: 1.5em;
         }
     }
 
@@ -126,21 +143,29 @@ $border-radius: 0.5em;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        padding: 0 1.5em;
-        margin: 1.5em 0;
+        padding: 0 $insta-post-gutter;
+        margin: $insta-post-gutter 0;
     }
 
     .insta-post-content {
         p {
-
-            padding: 0 1.5em;
+            padding: 0 $insta-post-gutter;
         }
     }
 
     .reactions {
         border-top: 2px solid $gray;
-        margin: 0 1.5em;
-        padding: 1.5em 0;
+        margin: 0 $insta-post-gutter;
+        padding: $insta-post-gutter 0;
+        display: flex;
+
+        > *:not(:last-child) {
+            margin-right: 1em;
+        }
+
+        > :first-child {
+            flex-grow: 1;
+        }
     }
 
     .reaction {
@@ -152,6 +177,26 @@ $border-radius: 0.5em;
             font-size: 1.5em;
             margin-right: 0.5em;
         }
+    }
+
+    .input-box-with-user {
+        display: flex;
+        margin: $insta-post-gutter;
+
+        > *:first-child {
+            margin-right: 0.5em;
+        }
+    }
+
+    .username-with-comment {
+        // margin: 0 $insta-post-gutter;
+
+        .username {
+            color: $green;
+            font-weight: bolder;
+        }
+
+        .comment {}
     }
 }
 @keyframes fade {

@@ -1,5 +1,14 @@
 .stream-react-components {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .stream-react-components input {
+    background-color: #efefef;
+    font-size: 1rem;
+    color: black;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 10000px;
+    display: block;
+    width: 100%; }
   .stream-react-components img {
     max-width: 100%;
     height: auto;
@@ -16,7 +25,7 @@
     padding: 1em;
     margin: 1em auto;
     border-radius: 0.5em;
-    box-shadow: 0.1em 0.1em 1em 0.1em #cccccc;
+    box-shadow: 0.1em 0.1em 1em 0.1em #D0D0D0;
     transition: transform 0.5s;
     cursor: pointer;
     max-width: 30em;
@@ -58,6 +67,9 @@
     .stream-react-components .user-profile.small {
       height: 2em;
       width: 2em; }
+    .stream-react-components .user-profile.ultra-small {
+      height: 1.5em;
+      width: 1.5em; }
   .stream-react-components .user-profile-group {
     display: grid;
     grid-template-areas: 'image name' 'image info';
@@ -90,7 +102,12 @@
   .stream-react-components .reactions {
     border-top: 2px solid #D0D0D0;
     margin: 0 1.5em;
-    padding: 1.5em 0; }
+    padding: 1.5em 0;
+    display: flex; }
+    .stream-react-components .reactions > *:not(:last-child) {
+      margin-right: 1em; }
+    .stream-react-components .reactions > :first-child {
+      flex-grow: 1; }
   .stream-react-components .reaction {
     display: flex;
     align-items: center;
@@ -98,6 +115,14 @@
     .stream-react-components .reaction i {
       font-size: 1.5em;
       margin-right: 0.5em; }
+  .stream-react-components .input-box-with-user {
+    display: flex;
+    margin: 1.5em; }
+    .stream-react-components .input-box-with-user > *:first-child {
+      margin-right: 0.5em; }
+  .stream-react-components .username-with-comment .username {
+    color: #21D26E;
+    font-weight: bolder; }
 
 @keyframes fade {
   from {

@@ -7,10 +7,15 @@
     }
     .pattern-library-container {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-around;
         align-items: center;
         padding: 5em 0;
-        background-color: #f0f0f0;
+        background: radial-gradient(white, #efefef);
+    }
+    .pattern-library-container > * {
+        /* margin-top: 5em;
+        margin-bottom: 5em; */
     }
 </style>
 
@@ -38,18 +43,54 @@
     <h3>Reaction</h3>
     <div class="pattern-library-container">
         <div class="reaction">
-            <i class="mdi mdi-message "></i>
+            <i class="mdi mdi-message"></i>
             <span>899,892 comments</span>
         </div>
     </div>
-    <h3>User profile pics, small, normal, large</h3>
+    <h3>User profile pics, ultra-small, small, normal, large</h3>
     <div class="pattern-library-container">
+        <img src="https://source.unsplash.com/collection/1112424/100x100" class="user-profile ultra-small">
         <img src="https://source.unsplash.com/collection/1112424/100x100" class="user-profile small">
         <img src="https://source.unsplash.com/collection/1112424/100x100" class="user-profile">
         <img src="https://source.unsplash.com/collection/1112424/100x100" class="user-profile large">
     </div>
+    <h3>Input box</h3>
+    <div class="pattern-library-container">
+        <input type="text" name="" value="" placeholder="Leave a comment">
+    </div>
+
     <h2>Molecules</h2>
+    <h3>Input box with user avatar</h3>
+    <div class="pattern-library-container">
+        <div class="input-box-with-user">
+
+            <img src="https://source.unsplash.com/collection/1112424/100x100" class="user-profile ultra-small">
+
+            <input type="text" name="" value="" placeholder="Leave a comment">
+        </div>
+    </div>
     <h3>Reactions</h3>
+    <div class="pattern-library-container">
+        <div class="reactions">
+            <div class="reaction">
+                <i class="mdi mdi-message"></i>
+                <span>899,892 comments</span>
+            </div>
+            <div class="reaction">
+                <i class="mdi mdi-thumb-up"></i>
+                <span>455k</span>
+            </div>
+            <div class="reaction">
+                <i class="mdi mdi-thumb-down"></i>
+                <span>23</span>
+            </div>
+            <div class="reaction">
+                <i class="mdi mdi-repeat"></i>
+                <span>344k</span>
+            </div>
+
+        </div>
+    </div>
     <h3>user base in header? (don't know what to call it)</h3>
     <div class="pattern-library-container">
         <div class="user-profile-group">
@@ -58,6 +99,21 @@
                 User 1234
             </span>
             <span class="info">Posted 38m ago</span>
+        </div>
+    </div>
+    <h3>Username with comment</h3>
+    <div class="pattern-library-container">
+        <div class="username-with-comment">
+            <span class="username">User 1234</span>
+            <span class="comment">Cray leggings kogi man braid, chambray distillery jianbing lyft palo santo plaid venmo tattooed.</span>
+        </div>
+        <div class="username-with-comment">
+            <span class="username">Ken Hoff</span>
+            <span class="comment">I like to build dumb fun web stuff, wrench on rusty old cars, and stare wistfully into the rain with a cortado and chillhop</span>
+        </div>
+        <div class="username-with-comment">
+            <span class="username">Joshua Tilton</span>
+            <span class="comment">🌏💯🤣👌☕️🥋📸</span>
         </div>
     </div>
     <h2>Organisms</h2>
@@ -84,9 +140,38 @@
                     <i class="mdi mdi-message"></i>
                     <span>899,892 comments</span>
                 </div>
+                <div class="reaction">
+                    <i class="mdi mdi-thumb-up"></i>
+                    <span>455k</span>
+                </div>
+                <div class="reaction">
+                    <i class="mdi mdi-thumb-down"></i>
+                    <span>23</span>
+                </div>
+                <div class="reaction">
+                    <i class="mdi mdi-repeat"></i>
+                    <span>344k</span>
+                </div>
+
             </div>
-            <div class="comment-box">
-                post comments
+            <div class="input-box-with-user">
+
+                <img src="https://source.unsplash.com/collection/1112424/100x100" class="user-profile ultra-small">
+
+                <input type="text" name="" value="" placeholder="Leave a comment">
+            </div>
+
+            <div class="username-with-comment">
+                <span class="username">User 1234</span>
+                <span class="comment">Cray leggings kogi man braid, chambray distillery jianbing lyft palo santo plaid venmo tattooed.</span>
+            </div>
+            <div class="username-with-comment">
+                <span class="username">Ken Hoff</span>
+                <span class="comment">I like to build dumb fun web stuff, wrench on rusty old cars, and stare wistfully into the rain with a cortado and chillhop</span>
+            </div>
+            <div class="username-with-comment">
+                <span class="username">Joshua Tilton</span>
+                <span class="comment">🌏💯🤣👌☕️🥋📸</span>
             </div>
         </div>
     </div>
