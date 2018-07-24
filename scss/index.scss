@@ -189,14 +189,26 @@ $insta-post-gutter: 1.5em;
     }
 
     .username-with-comment {
+        margin-top: 0.5em;
         // margin: 0 $insta-post-gutter;
-
         .username {
             color: $green;
             font-weight: bolder;
         }
 
         .comment {}
+    }
+
+    .comment-container {
+        display: flex;
+        margin: 1em $insta-post-gutter;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        img {
+            margin-right: 1em;
+        }
     }
 }
 @keyframes fade {

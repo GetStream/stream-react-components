@@ -120,9 +120,19 @@
     margin: 1.5em; }
     .stream-react-components .input-box-with-user > *:first-child {
       margin-right: 0.5em; }
-  .stream-react-components .username-with-comment .username {
-    color: #21D26E;
-    font-weight: bolder; }
+  .stream-react-components .username-with-comment {
+    margin-top: 0.5em; }
+    .stream-react-components .username-with-comment .username {
+      color: #21D26E;
+      font-weight: bolder; }
+  .stream-react-components .comment-container {
+    display: flex;
+    margin: 1em 1.5em;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start; }
+    .stream-react-components .comment-container img {
+      margin-right: 1em; }
 
 @keyframes fade {
   from {
