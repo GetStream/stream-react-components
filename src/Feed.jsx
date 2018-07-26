@@ -114,7 +114,7 @@ export default(streamClient) => {
                 });
             } else {
                 this.feed.get({id_lt: this.state.lastActivityID}).then(response => {
-                    if (response.results.length) {
+                    if (response.results.length == 0) {
                         return this.setState({loading: false, reachedEndOfFeed: true});
                     }
                     this.setState({
