@@ -3,6 +3,7 @@ node_js:
 - node
 deploy:
   provider: npm
+  email: "ken@hoff.tech"
   on:
     tags: true
   api_key:
