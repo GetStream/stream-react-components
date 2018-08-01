@@ -1,5 +1,4 @@
-/* theoretically, this is just for Jest. all the babel settings for building the actual app appear within webpack.config.js. */
-
 {
-    "presets": ["env", "react"]
+    "presets": ["env", "react"],
+    "plugins": ["transform-class-properties", "transform-object-rest-spread"]
 }

@@ -1,4 +1,5 @@
 const path = require("path");
+const fs = require("fs");
 
 module.exports = {
     mode: process.env.NODE_ENV || "development",
@@ -10,12 +11,9 @@ module.exports = {
                 include: [path.resolve(__dirname, "src")],
                 exclude: /node_modules/,
                 loader: "babel-loader",
-                options: {
-                    presets: [
-                        "env", "react"
-                    ],
-                    plugins: ["transform-class-properties", "transform-object-rest-spread"]
-                }
+                // Achtung!
+                // no, you can't just put the babel options in here, because Jest explicitly looks for a .babelrc file with presets and plugins.
+                options: JSON.parse(fs.readFileSync(".babelrc").toString())
             }
         ]
     },
