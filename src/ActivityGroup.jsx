@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const ActivityGroup = props => {
     let {
@@ -17,6 +18,10 @@ const ActivityGroup = props => {
         </code></pre>
 
     </div>);
+};
+
+ActivityGroup.propTypes = {
+    activityGroup: PropTypes.shape({id: PropTypes.string.isRequired, activities: PropTypes.array.isRequired, activity_count: PropTypes.number.isRequired, actor_count: PropTypes.number.isRequired}).isRequired
 };
 
 export default ActivityGroup;
