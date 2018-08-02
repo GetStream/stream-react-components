@@ -7,8 +7,10 @@
     "author": "Ken Hoff <ken@hoff.tech>",
     "license": "MIT",
     "scripts": {
-        "test": "echo \"No tests yet!\" && exit 0",
-        "dev": "concurrently \"webpack --watch --mode=\"development\"\" \"node-sass --watch ./scss --output ./css\""
+        "test": "jest",
+        "test-dev": "jest --watch",
+        "dev": "concurrently \"webpack --watch --mode=\"development\"\" \"node-sass --watch ./scss --output ./css\"",
+        "postinstall": "webpack && node-sass ./scss --output ./css"
     },
     "dependencies": {
         "babel-core": "^6.26.3",
@@ -22,11 +24,14 @@
         "react-waypoint": "^8.0.3"
     },
     "devDependencies": {
+        "babel-jest": "^23.4.2",
         "concurrently": "^3.6.0",
         "eslint": "^5.1.0",
         "eslint-plugin-react": "^7.10.0",
+        "jest": "^23.4.2",
         "mdi": "^2.2.43",
         "node-sass": "^4.9.2",
+        "react-test-renderer": "^16.4.2",
         "webpack": "^4.16.1",
         "webpack-cli": "^3.1.0"
     }

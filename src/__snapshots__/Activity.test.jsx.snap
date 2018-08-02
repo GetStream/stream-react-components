@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Activity renders correctly 1`] = `
+<div
+  className="stream-react-components activity"
+>
+  <pre>
+    <code>
+      {
+	"actor": "balazs@getstream.io",
+	"foreign_id": "",
+	"id": "c57b8fa0-911c-11e8-8f9d-0a081e7097fe",
+	"message": "Kinfolk banh mi salvia drinking vinegar.",
+	"object": "some-object",
+	"origin": null,
+	"target": "",
+	"time": "2018-07-26T21:42:19.312119",
+	"userEmail": "balazs@getstream.io",
+	"userName": "Balazs Horanyi",
+	"verb": "add-activity"
+}
+    </code>
+  </pre>
+</div>
+`;
