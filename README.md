@@ -59,14 +59,14 @@ If you'd like to customize the styling, you can override the styles on the `feed
 
 #### Props
 
-| Prop                     | Type      | Description                                                               | Required |
-| ------------------------ | --------- | ------------------------------------------------------------------------- | :------: |
-| `feedToken`              | String    | the server-generated read-only token for this feed                        |     ✓    |
-| `feedSlug`               | String    | the name of your feed group - e.g. `profile`                              |     ✓    |
-| `feedID`                 | String    | the ID of the feed you'd like to retrieve - e.g. `1234`                   |     ✓    |
-| `activityComponent`      | Component | the activity component you'd like to render for each activity in the feed |          |
-| `activityGroupComponent` | Component | the custom activity that you'd like to render                             |          |
-| `render`                 | Function  | a function called                                                         |          |
+| Prop                                                        | Type      | Description                                                                            | Required |
+| ----------------------------------------------------------- | --------- | -------------------------------------------------------------------------------------- | :------: |
+| `feedToken`                                                 | String    | the server-generated read-only token for this feed                                     |     ✓    |
+| `feedSlug`                                                  | String    | the name of your feed group - e.g. `profile`                                           |     ✓    |
+| `feedID`                                                    | String    | the ID of the feed you'd like to retrieve - e.g. `1234`                                |     ✓    |
+| [`activityComponent`](#custom-activity-component)           | Component | the activity component you'd like to render for each activity in the feed              |          |
+| [`activityGroupComponent`](#custom-activitygroup-component) | Component | the custom activity that you'd like to render                                          |          |
+| [`render`](#custom-renderer)                                | Function  | a function called with an `activities` argument, that will render in place of the feed |          |
 
 #### Usage
 
