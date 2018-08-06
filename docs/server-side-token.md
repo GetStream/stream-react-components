@@ -13,9 +13,9 @@ Here's a tiny Node.js server that will do that for you:
 // To run this locally, you'll first need to replace streamKey, streamSecret, and streamAppID with your own values.
 // To run this in production, please don't check streamKey, streamSecret, and streamAppID into version control.
 // Assigned reading can be found at https://12factor.net/config and https://www.npmjs.com/package/dotenv.
-let streamKey = "sxummmsqa6vt"
-let streamSecret = "3wmh6q8ezdutw5pxeh7rbkxenzxnct7dwy3a9gkgkrbg9m2dn56egpcvbme28v3j"
-let streamAppID = "39366"
+let streamKey = "yourStreamAppKey"
+let streamSecret = "yourStreamSecretKey"
+let streamAppID = "yourStreamAppID"
 
 // dependencies
 const express = require('express');
