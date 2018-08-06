@@ -20,4 +20,4 @@ stream.connect.mockReturnValue({
     }
 });
 
-export default stream
+export default stream;
