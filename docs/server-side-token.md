@@ -45,7 +45,7 @@ app.listen(9999, () => {
 
 To start this little server, run the following commands:
 
-```txt
+```text
 npm install express getstream cors
 node server.js
 ```
@@ -56,7 +56,7 @@ Now, whenever you send an HTTP `GET` request to `http://localhost:9999/feeds/pro
 
 The easiest way to create a new React app is with [`create-react-app`](https://github.com/facebook/create-react-app).
 
-```txt
+```text
 npx create-react-app my-stream-react-components-app
 cd my-stream-react-components-app
 npm start
@@ -70,7 +70,7 @@ You don't have to use `create-react-app` to use Stream's React components - you 
 
 If you're using `create-react-app`, the best place to put this is in your `src/App.js` file.
 
-Replace the contents of that file with this (you'll also need to install the `axios` and the `stream-react-components` dependencies, and replace `yourStreamAppKey`):
+Replace the contents of that file with this \(you'll also need to install the `axios` and the `stream-react-components` dependencies, and replace `yourStreamAppKey`\):
 
 ```jsx
 import React from 'react';
@@ -107,3 +107,4 @@ export default App;
 ```
 
 Otherwise, just fetch the read-only feed token and include it in the `Feed` component.
+
