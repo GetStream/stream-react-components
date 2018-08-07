@@ -1,5 +1,7 @@
 # Stream React Components
 
+Docs and tutorials are located at <https://stream.gitbook.io/stream-react-components/>
+
 Stream React Components provide a couple of features out of the box:
 
 -   **Retrieval of feeds, client-side** - no server-side integration needed (besides initial token generation)
