@@ -29,9 +29,9 @@ ReactDOM.render(
 
 1.  Include `stream-react-components` in your React app
 2.  Create a Stream app at <https://getstream.io/dashboard>, and create a feed group
-    -   Check out [Creating a new Stream app](/docs/create-stream-app.md)
+    -   Check out [Creating a new Stream app](docs/create-stream-app.md)
 3.  Create a read-only feed token server-side, pass it to the React app and include it in your `Feed` components
-    -   Check out [Generating Stream client-side tokens](/docs/server-side-token.md).
+    -   Check out [Generating Stream client-side tokens](docs/server-side-token.md).
 
 ## `StreamReactComponents` constructor
 
