@@ -1,6 +1,7 @@
 language: node_js
 node_js:
 - node
+before_script: webpack && node-sass ./scss --output ./css
 deploy:
   provider: npm
   email: ken@hoff.tech

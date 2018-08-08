@@ -9,8 +9,7 @@
     "scripts": {
         "test": "jest",
         "test-dev": "jest --watch",
-        "dev": "concurrently \"webpack --watch --mode=\"development\"\" \"node-sass --watch ./scss --output ./css\"",
-        "postinstall": "webpack && node-sass ./scss --output ./css"
+        "dev": "concurrently \"webpack --watch --mode=\"development\"\" \"node-sass --watch ./scss --output ./css\""
     },
     "dependencies": {
         "babel-core": "^6.26.3",
