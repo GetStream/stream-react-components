@@ -1,3 +1,5 @@
+> **`stream-react-components` is no longer maintained and is archived.** It was the Feeds v2 React components. New projects should use Feeds v3 with [`stream-feeds-js`](https://github.com/GetStream/stream-feeds-js). See https://getstream.io/activity-feeds/sdk/react/
+
 # Stream React Components
 
 Docs and tutorials are located at <https://stream.gitbook.io/stream-react-components/>
